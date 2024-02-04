@@ -1,10 +1,9 @@
-import os
 import glob
-
+import os
 from datetime import datetime
 
-from mtgdc_decklists import ImportDecks
 from mtgdc_aggregator import Aggregator
+from mtgdc_decklists import ImportDecks
 
 from . import KMeansACP, OpticsACP
 
