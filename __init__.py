@@ -89,7 +89,7 @@ class OpticsACP(ACP):
         plt.xlabel("Data Point Index")
         plt.ylabel("Reachability Distance")
         if output:
-            plt.savefig(f"clustered_{output}")
+            plt.savefig(output)
         else:
             plt.show()
         plt.close()
@@ -152,12 +152,14 @@ class KMeansACP(ACP):
             )
 
         plt.title("K-Means Clustering with PCA")
-        plt.xlabel("Principal Component 1")
-        plt.ylabel("Principal Component 2")
-        plt.legend(loc="lower center")
+        ax = plt.gca()
+        ax.xaxis.set_ticklabels([])
+        ax.yaxis.set_ticklabels([])
+
+        plt.legend()
 
         if output:
-            plt.savefig(f"kmeans_pca_{output}")
+            plt.savefig(output)
         else:
             plt.show()
         plt.close()
